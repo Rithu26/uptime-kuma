@@ -1,0 +1,23 @@
+warning: in the working copy of 'src/layouts/Layout.vue', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/src/layouts/Layout.vue b/src/layouts/Layout.vue[m
+[1mindex 70480cd9..d64ff324 100644[m
+[1m--- a/src/layouts/Layout.vue[m
+[1m+++ b/src/layouts/Layout.vue[m
+[36m@@ -19,7 +19,7 @@[m
+                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"[m
+             >[m
+                 <object class="bi me-2 ms-4" width="40" height="40" data="/icon.svg" />[m
+[31m-                <span class="fs-4 title">{{ $t("Uptime Kuma") }}</span>[m
+[32m+[m[32m                <span class="fs-4 title">GVR SSL Monitoring</span>[m
+             </router-link>[m
+ [m
+             <a[m
+[36m@@ -121,7 +121,7 @@[m
+         <header v-else class="d-flex flex-wrap justify-content-center pt-2 pb-2 mb-3">[m
+             <router-link to="/dashboard" class="d-flex align-items-center text-dark text-decoration-none">[m
+                 <object class="bi" width="40" height="40" data="/icon.svg" />[m
+[31m-                <span class="fs-4 title ms-2">Uptime Kuma</span>[m
+[32m+[m[32m                <span class="fs-4 title ms-2">GVR SSL Monitoring</span>[m
+             </router-link>[m
+         </header>[m
+ [m
