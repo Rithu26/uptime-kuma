@@ -1,0 +1,25 @@
+name: build-branded-image
+on:
+  push:
+    branches: [branding]
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile.brand
+          build-args: BASE_IMAGE=louislam/uptime-kuma:2.5.6
+          push: true
+          tags: ghcr.io/rithu26/uptime-kuma-brand:2.5.6-brand1
